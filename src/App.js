@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Food(){
+function Food(props){
+  console.log(props);
   return <h1>I Like Potato</h1>;
 }
 
@@ -12,7 +13,7 @@ function App() {
   return (
     <div>
       <h1>Hello!!!</h1>
-      <Food fav='Kimchi' />
+      <Food fav='Kimchi' something={true} papapa={['hello, 1,2,3,4,true']} />
     </div>
   );
 }
