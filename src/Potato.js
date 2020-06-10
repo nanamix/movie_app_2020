@@ -1,0 +1,1 @@
+import React from 'react';  // 이코드를 입력해야 리액트가 JSX를 이해할수 있음. 
