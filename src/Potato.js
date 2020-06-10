@@ -5,3 +5,5 @@ import React from 'react';  // 이코드를 입력해야 리액트가 JSX를 이
  function Potato() {
      return <h3>I love Potato</h3>; // ← HTML이 아닌 JSX
  }
+
+ export default Potato;
