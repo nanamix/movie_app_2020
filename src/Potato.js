@@ -6,4 +6,4 @@ import React from 'react';  // 이코드를 입력해야 리액트가 JSX를 이
      return <h3>I love Potato</h3>; // ← HTML이 아닌 JSX
  }
 
- export default Potato;
+ export default Potato; //이를 추가 하면 다른 파일에서 Potato컴포넌트를 사용할 수 있다. 
