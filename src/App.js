@@ -2,6 +2,24 @@ import React from 'react';
 
 class App extends React.Component {
   
+  constructor(props){
+    super(props);
+    console.log('hello');
+  }
+
+  componentDidMount(){
+    console.log('component rendered - componentDidMount');
+  }
+
+  componentDidUpdate(){
+    console.log('componentDidUpdate - component update');
+  }
+
+  //컴포넌트가 화면을 떠날때 실행
+  componentWillUnmount(){
+    console.log('Goodbye, cruel world');    
+  }
+
   state = {
     count : 0,
   };
@@ -30,6 +48,7 @@ class App extends React.Component {
   };
 
   render(){
+    console.log('render');
     return (
       <div>
         <h1>
