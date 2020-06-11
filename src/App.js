@@ -18,7 +18,10 @@ class App extends React.Component {
     const {
       data : { data : { movies, } },
     } = await axios.get('https://yts-proxy.now.sh/list_movies.json');
-    console.log(movies);
+    //console.log(movies);
+    //this.setState({ movies:movies});
+    this.setState({ movies });
+    
   };
 
   //API에서 데이터를 받아오는 => axios.get()을 실행하려면 시간이 핋요하고 , 그 사실을 자바스크립트에게 알려야만 데이터를 잡을 수 있으므로 async, await를 사용했음. 
