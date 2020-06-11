@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Food(props){
-  console.log(props);
-  return <h1>I Like { props.fav } </h1>;
+function Food({ fav }){
+  //console.log(props);
+  //{ fav } = props;
+  return <h1>I Like { fav } </h1>;
 }
 
 //App 컴포넌트 정의
@@ -14,6 +15,10 @@ function App() {
     <div>
       <h1>Hello!!!</h1>
       <Food fav='Kimchi' />
+      <Food fav='ramen' />
+      <Food fav='samgiopsal' />
+      <Food fav='chukumi' />
+
     </div>
   );
 }
