@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Movie from './Movie';
 
 class App extends React.Component {
 
@@ -41,7 +42,7 @@ class App extends React.Component {
             isLoading ? 'Loading ...' 
             : movies.map((movies) => {
               console.log(movies);
-              return;
+              return <Movie />;
             })
           }
           </div>
