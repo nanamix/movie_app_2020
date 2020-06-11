@@ -3,6 +3,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
+import './Movie.css'
 
 //function Movie({ id, title, year, summary, poster}) {
 function Movie({ title, year, summary, poster}) {
@@ -11,7 +12,7 @@ function Movie({ title, year, summary, poster}) {
         <div class="movie">
             <img src={poster} alt={title} title={title}/>
         <div class="movie__data">
-            <h3 class="movie_title" style={{background:'red'}}>{title}</h3>
+            <h3 class="movie_title">{title}</h3>
             <h3 class="movie_year">{year}</h3>
             <h3 class="movie_summary">{summary}</h3>
         </div>
