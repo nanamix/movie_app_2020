@@ -40,9 +40,15 @@ class App extends React.Component {
           <div>
           {
             isLoading ? 'Loading ...' 
-            : movies.map((movies) => {
-              console.log(movies);
-              return <Movie />;
+            : movies.map((movie) => {
+              console.log(movie);
+              return <Movie 
+                id    = {movie.id}
+                year  = {movie.year}
+                title = {movie.title}
+                summary = {movie.summary}
+                poster  = {movie.poster}
+              />;
             })
           }
           </div>
