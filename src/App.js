@@ -11,12 +11,24 @@ class App extends React.Component {
   add = () =>{
     //this.state.count = 1;
     //this.setState( { count : 1 });
-    this.setState( { count : this.state.count + 1 })
+    //this.setState( { count : this.state.count + 1 })
+    this.setState(current => (
+        {
+          count : current.count + 1
+        }
+      )
+    );
   };
 
   minus = () =>{
     //this.setState( { count : -1 });
-    this.setState( { count : this.state.count - 1 })
+    //this.setState( { count : this.state.count - 1 })
+    this.setState(current => (
+        {
+          count : current.count -1
+        }
+      )
+    );
   };
 
   render(){
