@@ -42,9 +42,12 @@ function App() {
   //App 컴포넌트는 HTML을 반환하고 있음.
   return (
     <div>
-      {foodILike.map(dish => (
+    
+    {foodILike.map(dish => 
+      (
         <Food name={dish.name} picture={dish.image} />
-        ))}
+      )
+    )}
       
     </div>
   );
