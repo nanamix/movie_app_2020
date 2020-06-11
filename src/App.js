@@ -17,7 +17,7 @@ class App extends React.Component {
     //console.log(movies.data.data.movies);
     const {
       data : { data : { movies, } },
-    } = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+    } = await axios.get('https://yts-proxy.now.sh/list_movies.json?sort-by=rating');
     //console.log(movies);
     //this.setState({ movies:movies});
     this.setState({ movies , isLoading : false });
@@ -33,8 +33,8 @@ class App extends React.Component {
 
 
   render(){
-        const { isLoading } = this.state;
-        return <div>{isLoading ? 'Loading ... ' : 'we are ready'}</div>;
+        const { isLoading, movies } = this.state;
+        return <div>{isLoading ? 'Loading ... ' : movies.map()}</div>;
       }
 
 

@@ -4,8 +4,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Movie() {
-    return <h1></h1>
+function Movie({ id, title, year, summary, poster}) {
+    return <h1>{title}</h1>
     
 }
 
