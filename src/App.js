@@ -48,7 +48,7 @@ class App extends React.Component {
               {movies.map(movie => (
                 //console.log(movie);
                 <Movie 
-                  key   = {movie.id}
+                  //key   = {movie.id}
                   id    = {movie.id}
                   year  = {movie.year}
                   title = {movie.title}

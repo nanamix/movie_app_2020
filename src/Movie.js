@@ -4,7 +4,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function Movie({ id, title, year, summary, poster}) {
+//function Movie({ id, title, year, summary, poster}) {
+function Movie({ title, year, summary, poster}) {
     // return <h1>{title}</h1>
     return (
         <div class="movie">
@@ -20,7 +21,7 @@ function Movie({ id, title, year, summary, poster}) {
 }
 
 Movie.prototype = {
-    id      :PropTypes.number.isRequired,
+    //id      :PropTypes.number.isRequired,
     year    :PropTypes.number.isRequired,
     title   :PropTypes.string.isRequired,
     summary :PropTypes.string.isRequired,
