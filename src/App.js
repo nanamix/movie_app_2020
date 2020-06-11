@@ -13,8 +13,12 @@ class App extends React.Component {
   //즉 자바스크립에게 getMovies() 함수는 비동기라서 기다려야 한다고 자바스크립에게 말한거라고 생각하면 됨.
   //await라는 키워드는 자바스크립에게 getMovioes() 함수의 axios.get()이 실행완료를 기다렸다가 끝나면 계속 진행해줘라고 말한거임.!
   getMovies = async () =>{ //async => 자바스크립트에게 getMovies()함수는 시간이 필요하고
-    const movies = await axios.get('https://yts.mx/api/v2/list_movies.json'); //await => axios.get()의 실행을 기다려 달라고 말해줌
-    console.log(movies.data.data.movies);
+    //const movies = await axios.get('https://yts.mx/api/v2/list_movies.json'); //await => axios.get()의 실행을 기다려 달라고 말해줌
+    //console.log(movies.data.data.movies);
+    const {
+      data : { data : { movies, } },
+    } = await axios.get('https://yts-proxy.now.sh/list_movies.json');
+    console.log(movies);
   };
 
   //API에서 데이터를 받아오는 => axios.get()을 실행하려면 시간이 핋요하고 , 그 사실을 자바스크립트에게 알려야만 데이터를 잡을 수 있으므로 async, await를 사용했음. 
