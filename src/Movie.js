@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import './Movie.css'
 
 //function Movie({ id, title, year, summary, poster}) {
-function Movie({ title, year, summary, poster}) {
+function Movie({ title, year, summary, poster, genres}) {
     // return <h1>{title}</h1>
     return (
         <div class="movie">
@@ -27,6 +27,7 @@ Movie.prototype = {
     title   :PropTypes.string.isRequired,
     summary :PropTypes.string.isRequired,
     poster  :PropTypes.string.isRequired,   //포스터에는 이미지주소(문자열) 이 저장됨.
+    genres  :PropTypes.arrayOf(PropTypes.string).isRequired,    //arrayOf(PropTypes.string)은 문자열을 원소로 하는 배열
 };
 
 export default Movie;
