@@ -9,12 +9,22 @@ import './Movie.css'
 function Movie({ title, year, summary, poster, genres}) {
     // return <h1>{title}</h1>
     return (
-        <div class="movie">
+        <div className="movie">
             <img src={poster} alt={title} title={title}/>
-        <div class="movie__data">
-            <h3 class="movie_title">{title}</h3>
-            <h3 class="movie_year">{year}</h3>
-            <h3 class="movie_summary">{summary}</h3>
+        <div className="movie__data">
+            <h3 className="movie__title">{title}</h3>
+            <h3 className="movie__year">{year}</h3>
+            <h3 className="movie__summary">{summary.slice(0, 180)}</h3>
+            <ul className="movie__genres">
+                {genres.map((genres, index)=>{
+                    //return <li className="movie__genres">{genres}</li>;
+                    return (
+                    <li key={index} className="movie__genre">
+                        {genres}
+                    </li>
+                    );
+                })}
+            </ul>
         </div>
         </div>
     );
